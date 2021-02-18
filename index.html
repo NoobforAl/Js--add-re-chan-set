@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<noscript><a href="#" class="btn btn-danger">مرور گر شما جاوا اسکریپت را پشتبانی نمی کند برای اطلا عت بیشتر کلیک کنید.</a></noscript>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bts/css/bootstrap.css">
+    <script src="bts/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="bts/Scripts/bootstrap.js"></script>
+
+
+
+    <title>Test</title>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div>
+            <h1>جدول مشخصات </h1>
+        </div><br/>
+        <div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>نام</th>
+                        <th>نام خانوادگی</th>
+                        <th>سن</th>
+                        <th>شماره تلفن </th>
+                        <th>شغل</th>
+                    </tr>
+                </thead>
+
+                <!--  body table -->
+
+                <tbody id="tbody"></tbody>
+            </table>
+
+            <!--    End table  -->
+
+            <h1 class="nav nav-tabs-justified">ایجاد شخص جدید</h1><br/>
+
+        </div>
+    </div>
+    <!-- add new number  -->
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>سن</th>
+                    <th>شماره تلفن </th>
+                    <th>شغل</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="col-md form-control" id="namee"></td>
+                    <td><input type="text" class="col-md form-control" id="namfam"></td>
+                    <td><input type="number" class="col-md form-control" id="agee"></td>
+                    <td><input type="number" class="col-md form-control" id="phonne"></td>
+                    <td><input type="text" class="col-md form-control" id="jobb"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- sunbmite -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3">
+            <button type="button" class="btn btn-success" onclick="succes1()">تایید</button>
+        </div>
+    </div>
+
+    <!-- Errrrrrorrrrrrrr -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3" style="border-color: red;">
+            <p class="col-md-6r" style=" color: red;" id="error"></p>
+        </div>
+    </div>
+
+    <!-- succses1 -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3" style="border-color: green;">
+            <p class="col-md-6r" style=" color: green;" id="suc1"></p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- chyang !!!  -->
+
+
+    <div class="container">
+        <h1 class="nav nav-tabs-justified">تغیر مشخصات</h1><br/>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>سن</th>
+                    <th>شماره تلفن </th>
+                    <th>شغل</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" class="col-md form-control" id="id_ch"></td>
+                    <td><input type="text" class="col-md form-control" id="namee_ch"></td>
+                    <td><input type="text" class="col-md form-control" id="namfam_ch"></td>
+                    <td><input type="number" class="col-md form-control" id="agee_ch"></td>
+                    <td><input type="number" class="col-md form-control" id="phonne_ch"></td>
+                    <td><input type="text" class="col-md form-control" id="jobb_ch"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- sunbmite -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3">
+            <button type="button" class="btn btn-info" onclick="change()">تایید</button>
+        </div>
+    </div>
+
+    <!-- Errrrrrorrrrrrrr -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3" style="border-color: red;">
+            <p class="col-md-6r" style=" color: red;" id="chang"></p>
+        </div>
+    </div>
+
+
+    <!-- succses3 -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3" style="border-color: green;">
+            <p class="col-md-6r" style=" color: green;" id="suc3"></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- delet --><br/>
+    <div class="container">
+        <h1 class="nav nav-tabs-justified">پاک کردن شخص</h1><br/>
+        <p>شماره جدول:</p>
+        <div>
+            <input class="col-md-2 form-control" type="number" id="deelt">
+            <br/>
+            <button type="button" class="btn btn-danger" onclick="delet()">پاک کردن</button>
+        </div>
+        <br/>
+
+        <!-- Errrrrrorrrrrrrr -->
+        <div class="container">
+            <div class="col-md-3.col-md-offset-3" style="border-color: red;">
+                <p class="col-md-6r" style=" color: red;" id="errordl"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- succses2 -->
+    <div class="container">
+        <div class="col-md-3.col-md-offset-3" style="border-color: green;">
+            <p class="col-md-6r" style=" color: green;" id="suc2"></p>
+        </div>
+    </div>
+
+    <br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Js Code -->
+    <script src="js/js.js "></script>
+</body>
+
+</html>
